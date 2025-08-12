@@ -1,22 +1,33 @@
 name: Build & Deploy to Pages repo
 
 on:
-  pull_request:
-    branches: [main]
+  workflow_run:
+    workflows: ["e2e"]
+    types: [completed]
 
 jobs:
   build-deploy:
+    if: >
+        ${{
+          github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.head_branch == 'main' &&
+          github.event.workflow_run.repository.full_name == github.repository
+        }}
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          name: site-out
+          path: out
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npm ci
-      - run: npm run build
+      - name: Sanity check artifact
+        run: ls -la out && test -f out/index.html
 
       - name: Deploy to external Pages repo
         uses: peaceiris/actions-gh-pages@v3
@@ -27,4 +38,4 @@ jobs:
           publish_dir: ./out
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: "Deploy from portfolio@${{ github.sha }}"
+          commit_message: "Deploy from portfolio@${{ github.event.workflow_run.head_sha }}"
