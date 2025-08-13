@@ -33,7 +33,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PAGES_TOKEN }}
-          external_repository: DaiYuzeng/yuzengdai.github.io
+          external_repository: DaiYuzeng/daiyuzeng.github.io
           publish_branch: main
           publish_dir: ./out
           user_name: "github-actions[bot]"
