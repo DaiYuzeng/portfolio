@@ -1,4 +1,3 @@
-// tests/main-section.spec.ts
 import { test, expect } from '@playwright/test';
 
 test.describe('MainSection', () => {
