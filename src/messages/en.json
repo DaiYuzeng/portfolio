@@ -7,6 +7,12 @@
     "header": {
       "briefIntro": "I build accessible, pixel-perfect digital experiences for the web."
     },
+    "about": {
+      "whoami": "I’m a front-end developer passionate about building accessible, scalable, and performance-driven interfaces. My code favors clarity and reusability, and I enjoy working where design meets engineering to create intuitive, user-friendly experiences.",
+      "recent": "Most recently, I worked on SUSE’s core product, Harvester, designing scalable component architecture, managing complex state, and building reusable UI components. I collaborated with the UI team to simplify interaction flows and deliver an out-of-the-box experience for users.",
+      "past": "Previously, I improved accessibility at Rancher, ensuring compliance with WCAG 2.1 and strengthening product reliability with RESTful API integrations and Playwright tests. Earlier at Neusoft, I built a cross-platform EV rental app and enhanced CRM workflows. I’ve also contributed to open-source projects like Rancher and Harvester, continuing my commitment to building tools that empower users.",
+      "leisure": "In my free time, I’ve been fascinated by baking — you’ll see some of my “creations” later on my website. I’m also a beginner at sport climbing, which means my leisure life is often filled with the buzz of mixers in the kitchen and the occasional thud of me falling at the climbing gym :D"
+    },
     "experience": {
       "title": "Experience",
       "items": {
