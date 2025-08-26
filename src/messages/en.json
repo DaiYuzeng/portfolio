@@ -1,0 +1,31 @@
+{
+  "generic": {
+    "me": "Yuzeng Dai",
+    "role": "Front End Engineer"
+  },
+  "section": {
+    "header": {
+      "briefIntro": "I build accessible, pixel-perfect digital experiences for the web."
+    },
+    "experience": {
+      "title": "Experience",
+      "items": {
+        "suse": {
+          "position": "Frontend Engineer",
+          "company": "SUSE",
+          "description": "Designed scalable component architecture and managed complex state, implementing high-quality, reusable, and easy-to-read components for critical UI features in SUSE’s core product, Harvester. Collaborated closely with the UI team to refactor and enhance user interaction flows, delivering a simpler, more intuitive user experience that aligned with the company’s business goal: enabling everyone to use Harvester right out of the box."
+        },
+        "rancher": {
+          "position": "Frontend Engineer",
+          "company": "Rancher By SUSE",
+          "description": "Improved accessibility across the Rancher product line by ensuring compliance with WCAG 2.1 standards, delivering a consistent and inclusive user experience for users of all abilities. Partnered with backend teams to design and integrate RESTful APIs, aligning front-end functionality with underlying services. Strengthened application reliability by covering edge cases and error handling through comprehensive Playwright end-to-end tests. Actively contributed to a more robust, reliable, and user-friendly platform that empowered teams to manage Kubernetes clusters with confidence."
+        },
+        "neusoft": {
+          "position": "Software Engineer",
+          "company": "Neusoft",
+          "description": "Developed and maintained an electric vehicle rental application, a cross-platform product built with Ionic that reduced development time and cost while delivering a consistent user experience across both mobile devices and web browsers. Implemented a real-time vehicle tracking feature by integrating Amap’s API with the three.js framework, enabling users and staff to visualize car locations and routes dynamically. Contributed to the company’s CRM system by enhancing and maintaining an approval module that supported complex approval flows and sub-tasks, streamlining operational processes and improving overall efficiency for business users."
+        }
+      }
+    }
+  }
+}

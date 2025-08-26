@@ -1,6 +1,6 @@
 "use client";
 
-import { SwitcherProps } from "@/types/switcher";
+import { SwitcherProps } from "@/types/components";
 import { useState, useEffect, useId } from "react";
 
 export default function Switcher({ defaultChecked, role = 'switch', ariaLabel = 'Switcher', ariaDescription = 'This is a switcher used to switch between modes or something else.' , onChange, children }: SwitcherProps) {
