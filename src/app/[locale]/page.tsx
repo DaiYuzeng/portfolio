@@ -14,10 +14,10 @@ export default async function Home({ params} : {params: Promise<{ locale: string
   return (
     <>
       <Header />
-      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans">
-        <div>
+      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans lg:py-0">
+        <div className="lg:flex lg:gap-4">
           <Intro />
-          <main className="pt-24">
+          <main className="pt-24 lg:w-[52%] lg:py-24">
             <MainSection title="About">
               <AboutSection />
             </MainSection>
