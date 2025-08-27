@@ -1,6 +1,6 @@
 import React from "react";
 
 export interface MainSectionProps {
-  title: string;
+  id: string;
   children?: React.ReactNode;
 }
