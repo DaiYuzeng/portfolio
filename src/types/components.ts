@@ -1,4 +1,4 @@
-export interface SwitcherProps {
+export type SwitcherProps = {
   defaultChecked?: boolean,
   onChange: (value: boolean) => void,
   ariaLabel?: string,
@@ -7,7 +7,7 @@ export interface SwitcherProps {
   children?: React.ReactNode
 }
 
-export interface PanelProps {
+export type PanelProps = {
   title: string;
   subTitle?: string;
   imageUrl?: string;
@@ -27,4 +27,11 @@ export interface Experience extends ExperienceMeta {
   company: string;
   position: string;
   description: string;
+}
+
+
+export type NavItemProps = {
+  navKey: string;
+  active: boolean;
+  onClick: (id: string) => void;
 }
