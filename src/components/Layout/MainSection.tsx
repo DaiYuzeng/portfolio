@@ -1,10 +1,29 @@
 import { MainSectionProps } from "@/types/layout"
 
-export default function MainSection( {title, children}: MainSectionProps ) {
+import { useTranslations } from "next-intl"
+
+export default function MainSection( {id, children}: MainSectionProps ) {
+  const t = useTranslations();
+
   return (
-    <section>
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200">{title}</h2>
+    <section
+        id={id}
+        role="region"
+        aria-labelledby={`section-${id}-title`}
+        data-testid={`main-section-${id}`}
+        className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      >
+      <div
+          className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur lg:w-full md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+          data-testid={`main-section-${id}-sticky`}
+        >
+        <h2
+            id={`section-${id}-title`}
+            data-testid={`main-section-${id}-title`}
+            className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
+          >
+            {t(`section.${id}.title`)}
+          </h2>
       </div>
       <div>
         {children}
