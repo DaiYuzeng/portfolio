@@ -12,7 +12,7 @@ export default function Intro() {
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">{t('generic.me')}</h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">{t('generic.role')}</h2>
         <p className="mt-4 max-w-xs leading-normal">{t('section.header.briefIntro')}</p>
-        <Nav navKeys={['about', 'experience']} />
+        <Nav navKeys={['about', 'experience', 'projects']} />
       </div>
       <SocialIcons />
     </header>
