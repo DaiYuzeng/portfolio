@@ -8,7 +8,7 @@ export default function useScrollSpy(ids: string[]) {
 
     const observer = new IntersectionObserver((entries) => {
       const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-      
+
       if (visible[0]) setActiveId(visible[0].target.id)
       else {
         const top = elements.find((el: HTMLElement) => el.getBoundingClientRect().top >= 0)
@@ -17,7 +17,7 @@ export default function useScrollSpy(ids: string[]) {
       }
     }, {
       root: null,
-      rootMargin: "0px 0px -70% 0px",
+      rootMargin: "-50% 0px -50% 0px",
       threshold: [0, 0.25, 0.5, 0.75, 1]
     })
 
