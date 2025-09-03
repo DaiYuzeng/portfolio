@@ -6,6 +6,7 @@ import Intro from "@/components/Intro";
 import MainSection from "@/components/Layout/MainSection";
 import AboutSection from '@/components/Section/About';
 import ExperienceSection from '@/components/Section/Experience';
+import ProjectsSection from '@/components/Section/Projects';
 
 export default async function Home({ params} : {params: Promise<{ locale: string}>}) {
   const { locale } = await params;
@@ -25,6 +26,9 @@ export default async function Home({ params} : {params: Promise<{ locale: string
             </MainSection>
             <MainSection id="experience">
               <ExperienceSection />
+            </MainSection>
+            <MainSection id="projects">
+              <ProjectsSection />
             </MainSection>
           </main>
         </div>

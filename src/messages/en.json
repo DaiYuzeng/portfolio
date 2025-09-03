@@ -33,6 +33,23 @@
           "description": "Developed and maintained an electric vehicle rental application, a cross-platform product built with Ionic that reduced development time and cost while delivering a consistent user experience across both mobile devices and web browsers. Implemented a real-time vehicle tracking feature by integrating Amap’s API with the three.js framework, enabling users and staff to visualize car locations and routes dynamically. Contributed to the company’s CRM system by enhancing and maintaining an approval module that supported complex approval flows and sub-tasks, streamlining operational processes and improving overall efficiency for business users."
         }
       }
+    },
+    "projects": {
+      "title": "Projects",
+      "items": {
+        "harvester": {
+          "title": "Harvester",
+          "description": "Harvester is an open-source hyperconverged infrastructure (HCI) solution from SUSE. Built on Kubernetes and KubeVirt, it unifies virtual machines and container workloads on the same platform, providing a simple, modern alternative to traditional virtualization."
+        },
+        "rancher": {
+          "title": "Rancher Prime",
+          "description": "Rancher Prime is SUSE’s enterprise-supported Kubernetes management platform, offering secure, stable, and fully supported Rancher for running and managing clusters across cloud, on-prem, and edge."
+        },
+        "qingke": {
+          "title": "Qingke",
+          "description": "Qingke is a cross-platform electric vehicle rental application developed using the Ionic framework. It provides a seamless user experience across both mobile devices and web browsers, featuring real-time interaction through the integration of Amap’s API and three.js."
+        }
+      }
     }
   }
 }
