@@ -1,7 +1,8 @@
 {
   "generic": {
     "me": "戴與增",
-    "role": "前端工程师"
+    "role": "前端工程师",
+    "skipToContent": "跳至主要内容"
   },
   "section": {
     "header": {

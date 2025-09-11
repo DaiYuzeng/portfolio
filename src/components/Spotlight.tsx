@@ -23,6 +23,11 @@ export default function Spotlight() {
   }, []);
 
   return (
-    <div className="spotlight fixed pointer-events-none inset-0 z-30 transition duration-300 lg:absolute" style={style}></div>
+    <div
+      className="spotlight fixed pointer-events-none inset-0 z-30 transition duration-300 lg:absolute"
+      style={style}
+      aria-hidden="true"
+      role="presentation"
+    ></div>
   );
 }
