@@ -2,6 +2,7 @@ import projectsMetaData from "@/data/projects"
 
 import Panel from "@/components/Panel"
 import Link from "next/link"
+import Image from 'next/image'
 import { Star, Building2, Download } from "lucide-react";
 
 import { ProjectMeta } from "@/types/components"
@@ -20,10 +21,8 @@ export default function ExperienceSection() {
     <>
       {projectsMetaData.map((item: ProjectMeta) => {
         const base: string = `items.${item.id}`;
-        {/* We can use optimized <Image /> component in Next.js here */}
-        {/* But we can dive deeper into what has Next.js done in its <Image /> */}
         const thumbnail: React.ReactNode = (
-          <img
+          <Image
               src={item.imgUrl}
               width={200}
               height={48}
@@ -39,8 +38,17 @@ export default function ExperienceSection() {
                 const Icon = IconsMap[link.icon];
 
                 return (
-                  <Link href={link.url} key={link.url} target="_blank" rel="noreferrer noopener" className="project-external-link relative inline-flex items-center mr-2 mt-2 text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300">
-                    <Icon className="w-3 h-3 mr-1" />{link.title}
+                  <Link
+                    href={link.url}
+                    key={link.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="project-external-link relative inline-flex items-center mr-2 mt-2 text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
+                    aria-label={`${link.title} (opens in a new tab)`}
+                  >
+                    <Icon className="w-3 h-3 mr-1" aria-hidden="true" />
+                    {link.title}
+                    <span className="sr-only"> (opens in a new tab)</span>
                   </Link>
                 )
               })

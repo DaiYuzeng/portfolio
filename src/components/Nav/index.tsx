@@ -20,7 +20,7 @@ export default function Nav({ navKeys }: { navKeys: string[] }) {
   }, [])
 
   return (
-    <nav className="nav hidden lg:block">
+    <nav className="nav hidden lg:block" aria-label="Section navigation">
       <ul className="mt-16 w-max">
         {
           navKeys.map((navKey: string) => (
